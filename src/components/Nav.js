@@ -6,7 +6,9 @@ export default function Nav (props) {
             <h1>Jesus Olaiz</h1>
 
             <div className="links">
-                <a className="link" href='/'>link</a>
+                <a className="link" href='/'>
+                link
+                </a>
             </div>
         </nav>
     )
