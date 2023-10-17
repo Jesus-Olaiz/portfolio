@@ -4,7 +4,6 @@ import useTypingEffect from '../hooks/typing-effect'
 const buzzWords = ['Innovative', 'Responsive', 'Detail-Oriented', 'Versatile', 'Collaborative', 'Results-Driven']
 
 
-
 const Hero = (props) => {
     const [word, setWord] = useState('Motivated')
     const [count, setCount] = useState(0)
@@ -36,18 +35,27 @@ const Hero = (props) => {
 
     return (
         <div className='hero'>
-            <div>
-            <p>{`Class Developer {`}</p>
-            <p>{`constructor(name, age, skills){`}</p>
-            <p>{`this.name = name;`}</p>
-            <p>{`this.age = age;`}</p>
-            <p>{`this.skills = skills;`}</p>
-            <p>{`}`}</p>
-            <p>{`}`}</p>
-            <p></p>
-            <p>{`const jesusOlaiz = new Developer('Jesus Olaiz', 25, ${useTypingEffect(word, 125)} )`}</p>
+            <div className = 'codeBox'>
+            <div className="hardCoded">
+            <p><span id="class">Class</span> <span id='classVar'>Developer</span> <span className='nestedBracket'>{`{`}</span></p>
+
+            <p><span id='constructor'>constructor</span><span class="vars"> <span className='functionPurple'>{`(`}</span>name<span className='symbols'>,</span> age<span className='symbols'>,</span> skills</span><span className='functionPurple'>{`){`}</span></p>
+
+            <p><span className='thisVar'>this</span><span className='symbols'>.</span>name <span className='symbols'>=</span> name<span className='symbols'>;</span></p>
+            
+            <p><span className='thisVar'>this</span><span className='symbols'>.</span>age <span className='symbols'>=</span> age<span className='symbols'>;</span></p>
+
+            <p><span className='thisVar'>this</span><span className='symbols'>.</span>skills <span className='symbols'>=</span> skills<span className='symbols'>;</span></p>
+
+            <p className = 'functionPurple'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{`}`}</p>
+            <p className="nestedBracket">{`}`}</p>
+
+            <p><span className="thisVar">const</span> me <span className="symbols">=</span> <span className="thisVar">new</span> <span className="newDev">Developer</span><span className='nestedBracket'>{`(`}</span><span className='stringRed'>'Jesus Olaiz'</span><span className='symbols'>,</span> <span className="numberGreen">25</span><span className='symbols'>,</span> <span className='functionPurple'>{`[`}</span> {useTypingEffect(word, 125)} <span className='functionPurple'>{`]`}</span><span className='nestedBracket'>{`)`}</span></p>
+            </div>
+            
+            
+            
             </div>          
-            <h1>{}</h1>
         </div>
     )
 

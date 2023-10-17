@@ -1,5 +1,15 @@
 :root {
   --main-color: rgb(29, 32, 59);
+  --constructor-color: #dad8ac;
+  --bracket-yellow: #f4d424;
+  --class-color: #5891cf;
+  --class-var-color: #5fbda0; 
+  --var-params-color: #90d9fd;
+  --function-purple-color: #ce77cc;
+  --string-red-color: #ca9176;
+  --number-green-color: #95a98b;
+
+  --code-font: 'consolas';
 }
 
 
@@ -44,14 +54,75 @@ nav{
 .hero{
   margin-top: 3.5rem;
 
+  box-sizing: border-box;
 
-  height: 50vh;
 
+  height: 75vh;
 
+  /* background: center/75% url('../src/imgs/heroBG.jpg') no-repeat; */
 
   background-color: black;
   color: white;
 }
+
+
+.hardCoded{
+  display:flex;
+  flex-direction: column;
+  text-align: left; 
+
+  font-family: 'Consolas', 'Courier New';
+
+  color: var(--var-params-color)
+
+}
+
+.hardCoded p {
+  padding-left: 2.5rem;
+}
+
+/* color assignments for hero */
+
+#class{
+  color: var(--class-color);
+}
+#classVar{
+  color: var(--class-var-color);
+}
+#constructor{
+  color: var(--constructor-color)
+}
+#var-params{
+  color:var(--var-params-color)
+}
+
+.newDev{
+  color: var(--class-var-color)
+}
+
+.thisVar{
+  color: var(--class-color)
+}
+
+.nestedBracket{
+  color:var(--bracket-yellow)
+}
+.symbols{
+  color: white
+}
+.stringRed{
+  color: var(--string-red-color);
+}
+.numberGreen{
+  color: var(--number-green-color);
+}
+
+.functionPurple{
+  color: var(--function-purple-color)
+}
+
+
+
 
 
 /******* TOOLKIT SECTION  *******/
