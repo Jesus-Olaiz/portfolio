@@ -14,55 +14,64 @@
 
 
 .App {
+  font-family: 'Consolas', 'Courier New';
+
+  margin-top: -1rem;
+
+  min-height: 100vh;
+  min-width: 100vw;
+
+
+  display: grid;
+  grid-template-areas:
+        "hero"
+        "toolkit";
+grid-template-columns: 1fr;
+grid-template-rows: 2fr 1fr;
+
   text-align: center;
   position: relative;
 }
 
 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 /****** NAV SECTION  ******/
-nav{
-  background-color: white;
-  color: black;
-
-  height: 3rem;
-  width: 100%;
-
-  display:flex;
-  justify-content: space-between;
-  align-items: baseline;
+.nav{
+  background-color: black;
+  color: white;
 
   
-  padding-right:1rem;
+  max-width: 100vw ;
+  min-height: 1em;
 
-  z-index: 1000;
-
-  position: fixed;
-  left: 0;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  
+  padding: 1rem 0 2rem;
+  
 
 }
+
+
 
 
 /******* HERO SECTION *******/
 .hero{
-  margin-top: 3.5rem;
+  margin: 0;
 
   box-sizing: border-box;
 
 
   height: 75vh;
 
-  /* background: center/75% url('../src/imgs/heroBG.jpg') no-repeat; */
+
 
   background-color: black;
   color: white;
+
+  grid-area: hero;
 }
 
 
@@ -121,6 +130,37 @@ nav{
   color: var(--function-purple-color)
 }
 
+/* blinking cursor */
+.typingChars{
+  position: relative;
+}
+.typingChars::after {
+  color: white;
+  content:'|';
+
+
+  animation: blinking alternate infinite .25s 
+  /* width: 2px;
+
+  height: 4px; */
+
+  /* color:white;
+  background-color: white;
+  border: white, solid, 2px; */
+}
+
+@keyframes blinking {
+  0%{
+    opacity: 0%;
+  }
+  /* 50%{
+    opacity: 50%;
+  } */
+  100%{
+    opacity: 100%;
+  }
+}
+
 
 
 
@@ -128,35 +168,14 @@ nav{
 /******* TOOLKIT SECTION  *******/
 
 .toolkit{
+  grid-area: toolkit;
   background-color: var(--main-color);
   color: white;
-  height: 60vh;
+  height: 100%;
 
   
 }
 
-
-/****** STORY BOARD SECTION  *******/
-
-.storyBoard{
-  height: 100vh;
-  width: 100%;
-  background-color: var(--main-color);
-  color: white;
-  position:relative;
-}
-
-.cover {
-  background-color: var(--main-color);
-
-  display: none;
-
-  width:100%;
-  height: 50%;
-  position: fixed;
-  bottom:0px;
-  left: 0px;
-}
 
 
 

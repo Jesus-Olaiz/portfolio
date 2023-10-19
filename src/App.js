@@ -1,22 +1,18 @@
+import { Route, Routes } from "react-router-dom";
 
-import './App.css';
-import Cover from './components/Cover';
+import "./App.css";
 
-import Hero from './components/Hero.js'
-import Nav from './components/Nav'
-import Storyboard from './components/Storyboard';
-import Toolkit from './components/Toolkit';
+import Home from "./components/Home";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-    <div className="App">
-    <Nav />
-    <Hero />
-    <Toolkit />
-    <Storyboard />
-    <Cover />
-      
-    </div>
+    <>
+      <Nav />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+    </>
   );
 }
 
