@@ -8,6 +8,9 @@
   --function-purple-color: #ce77cc;
   --string-red-color: #ca9176;
   --number-green-color: #95a98b;
+  --file-text-yellow-color: #d8bd8e;
+  --border-blue-color: #86afbc;
+  --border-orange-color: #ca8033;
 
   --code-font: 'consolas';
 }
@@ -49,29 +52,84 @@ grid-template-rows: 2fr 1fr;
   justify-content: space-between;
   align-items: baseline;
   
-  padding: 1rem 0 2rem;
+  padding: 0 2rem 0 0;
+
+  border: solid 1px var(--border-blue-color)
   
 
 }
 
+.pages{
+  display: flex; 
+  gap: 0;
+  
+
+}
+
+.link{
+  position: relative;
+  text-decoration: none;
+  color: var(--file-text-yellow-color);
+
+  height: 100%;
+
+  padding: .5rem 1rem;
+
+
+  border: solid var(--border-blue-color) 1px;
+  border-bottom: none;
+  border-top: none;
+}
+.linkIcon{
+  color: yellow;
+  margin-right: .5rem;
+}
+
+
+.border{
+  width: 93%;
+
+  height: 80%;
+
+  border: var(--border-orange-color) solid 1px;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+}
+
+
+
+.filepath{
+  background: black;
+  color: white;
+
+  padding-left: 1rem;
+
+  border: solid 1px var(--border-blue-color);
+  border-top: none;
+
+  font-size: .85rem;
+}
+
+.filePathIcon{
+  color:yellow;
+}
 
 
 
 /******* HERO SECTION *******/
 .hero{
-  margin: 0;
+  margin-top: 1rem;
 
   box-sizing: border-box;
 
 
   height: 75vh;
-
-
-
+  
   background-color: black;
   color: white;
 
-  grid-area: hero;
+  
 }
 
 
@@ -168,16 +226,122 @@ grid-template-rows: 2fr 1fr;
 /******* TOOLKIT SECTION  *******/
 
 .toolkit{
-  grid-area: toolkit;
-  background-color: var(--main-color);
+  display:flex;
+  flex-direction: column;
+
+  font-family: 'Consolas', 'Courier New';
+
+  background-color: black;
   color: white;
   height: 100%;
 
+  border-top: solid 1px var(--border-blue-color);
   
+  padding-bottom: 1rem;
+}
+
+.tabs{
+
+  display: flex;
+  
+
+  width: 100%;
+  height: 15%;
+}
+
+.tab:hover{
+  cursor:pointer;
+}
+
+.tab{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 10%;
+  height: 100%;
+  background-color: black;
+
+  position: relative;
+
+  font-size: .85rem;
+  font-weight: light;
+}
+
+.contact{
+  height: 100%;
+  
+}
+
+
+#contact-form{
+
+
+  width: 60%;
+  
+
+  display: flex;
+  flex-direction: column;
+  
+  justify-content: flex-end;
+
+
+  gap: 1rem;
+
+  margin: 0 auto;
+
+}
+#contact-form button{
+  width: 25%;
+  margin: 0 auto;
+
+
+  background-color: black;
+  color: white;
+  border: solid 2px var(--border-blue-color)
+
+}
+
+#contact-form button:hover, #contact-form button:focus{
+  font-weight:bolder;
+  background-color: var(--border-blue-color);
+  color: black;
+}
+
+.formGroup{
+
+  gap: 2rem;
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  margin: 0 auto;
+}
+
+.formGroup input{
+  color:white;
+  background-color: black;
+  border: none;
+  border-bottom: solid 1px var(--border-blue-color); 
+}
+
+.formGroup textarea{
+  color:white;
+  background-color: black;
+  border: none;
+  border-bottom: solid 1px var(--border-blue-color);
 }
 
 
 
 
+/********* ABOUT PAGE  ***********/
+.about{
+  color: white;
+  background-color: black;
+
+  height: 100vh;
+  width: 100%;
+}
 
 
+/********* PROJECTS PAGE  ***********/

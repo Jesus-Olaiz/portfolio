@@ -40,7 +40,7 @@ const Hero = (props) => {
             <div className="hardCoded">
             <p><span id="class">Class</span> <span id='classVar'>Developer</span> <span className='nestedBracket'>{`{`}</span></p>
 
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='constructor'>constructor</span><span class="vars"> <span className='functionPurple'>{`(`}</span>name<span className='symbols'>,</span> age<span className='symbols'>,</span> skills</span><span className='functionPurple'>{`){`}</span></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span id='constructor'>constructor</span><span className="vars"> <span className='functionPurple'>{`(`}</span>name<span className='symbols'>,</span> age<span className='symbols'>,</span> skills</span><span className='functionPurple'>{`){`}</span></p>
 
             <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className='thisVar'>this</span><span className='symbols'>.</span>name <span className='symbols'>=</span> name<span className='symbols'>;</span></p>
             

@@ -1,17 +1,52 @@
 import { Link } from "react-router-dom";
 
-export default function Nav(props) {
-  return (
-    <div className='nav'>
-     <div className="pages">
-        <Link to={'/'}>Home</Link>
-        <Link to={'/About'}>About</Link>
-     </div>
-      
+import { useState } from "react";
 
-      <div className="socialContacts">
-        <a href="something.com">SVG</a>
+// font awesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faSquareJs } from "@fortawesome/free-brands-svg-icons";
+
+const square = <FontAwesomeIcon className='file-svg' icon={faSquareJs} />;
+
+export default function Nav(props) {
+  const [selected, setSelected] = useState("Home");
+
+  const onClick = (e) => {
+    setSelected(e.target.name);
+  };
+
+  return (
+    <>
+      <div className='nav'>
+        <div className='pages'>
+          <Link onClick={onClick} name='Home' className='link' to={"/"}>
+            {selected === "Home" ? <div className='border'></div> : null}
+            <span className='linkIcon'>{square}</span>Home.js
+          </Link>
+          <Link onClick={onClick} name='About' className='link' to={"/about"}>
+            {selected === "About" ? <div className='border'></div> : null}
+            <span className='linkIcon'>{square}</span>About.js
+          </Link>
+          <Link
+            onClick={onClick}
+            name='Projects'
+            className='link'
+            to={"/projects"}
+          >
+            {selected === "Projects" ? <div className='border'></div> : null}
+            <span className='linkIcon'>{square}</span>Projects.js
+          </Link>
+        </div>
+
+        <div className='socialContacts'>
+          <a href='something.com'>SVG</a>
+        </div>
       </div>
-    </div>
+
+      <div className="filepath">
+        {`src > components >`} <span className="filePathIcon">{square}</span> {selected}{`.js > ...`}
+      </div>
+    </>
   );
 }
