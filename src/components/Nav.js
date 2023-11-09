@@ -5,9 +5,13 @@ import { useState } from "react";
 // font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faSquareJs } from "@fortawesome/free-brands-svg-icons";
+import { faSquareJs, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const square = <FontAwesomeIcon className='file-svg' icon={faSquareJs} />;
+
+const github = <FontAwesomeIcon className="git-hub-svg" icon={faGithub} />
+
+const linkedin = <FontAwesomeIcon className="linkedIn-svg" icon={faLinkedin} />
 
 export default function Nav(props) {
   const [selected, setSelected] = useState("Home");
@@ -40,7 +44,9 @@ export default function Nav(props) {
         </div>
 
         <div className='socialContacts'>
-          <a href='something.com'>SVG</a>
+          <a href='https://github.com/Jesus-Olaiz'>{github}</a>
+
+          <a href="https://www.linkedin.com/in/jesus-olaiz-469355296">{linkedin}</a>
         </div>
       </div>
 

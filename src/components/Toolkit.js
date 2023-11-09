@@ -96,7 +96,19 @@ export default function Toolkit(props) {
         </div>
         :
         <footer>
-            This is the end
+            <ul>
+              <li>User@computer-name MINGW64 ~/folder/portfolio {`(master)`}</li>
+              <li>ls portfolio/rights</li>
+              <br></br>
+              <li></li>
+              <li>Made By: Jesus Olaiz</li>
+              <li>All rights reserved.</li>
+              <br></br>
+              <br></br>
+              <br></br>
+              <li>User@computer-name MINGW64 ~/folder/portfolio {`(master)`}</li>
+            </ul>
+
         </footer>
       }
     </div>
